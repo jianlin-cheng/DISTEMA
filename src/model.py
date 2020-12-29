@@ -1,7 +1,7 @@
 """
 @ Description: Deep Learning model
 @ Author: Shawn Chen
-@ Create date: 2020-06-30
+@ Create date: 2020-12-29
 """
 
 import os
