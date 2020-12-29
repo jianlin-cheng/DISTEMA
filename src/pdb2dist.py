@@ -1,3 +1,10 @@
+"""
+@ Description: Calcudate distance map from pdb file
+@ Author: Shawn Chen
+@ Create date: 2020-12-29
+"""
+
+
 import re
 import os
 import glob
