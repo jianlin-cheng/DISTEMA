@@ -39,7 +39,6 @@ Prediction of the quality of single protein model using deep learning and residu
    
    pip install pandas
    pip install scipy
-   pip install matplotlib
    ```
 
 # Evaluation
