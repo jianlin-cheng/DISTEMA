@@ -23,8 +23,8 @@ dist_folder = os.path.abspath(sys.argv[3])
 
 script_path = os.path.dirname(os.path.realpath(__file__))
 
-if not os.path.exists(dist_folder):
-    os.makedirs(dist_folder, exist_ok=True)
+# if not os.path.exists(dist_folder):
+#     os.makedirs(dist_folder, exist_ok=True)
 
 
 if __name__=="__main__":
