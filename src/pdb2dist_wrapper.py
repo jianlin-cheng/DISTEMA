@@ -13,7 +13,7 @@ import argparse
 
 parser = argparse.ArgumentParser(
     usage = 'python pdb2dist_wrapper.py',
-    descriptipon = 'wrapper for pdb2dist'
+    description = 'wrapper for pdb2dist'
 )
 
 parser.add_argument('-i', '--input', help='Input server model folder', required=True)
