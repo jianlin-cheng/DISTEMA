@@ -24,13 +24,7 @@ Prediction of the quality of single protein model using deep learning and residu
 
 4. Install required packages, CUDA is not requited.
 
-   ```bash
-   # CUDA 9.2
-   conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=9.2 -c pytorch
-   
-   # CUDA 10.1
-   conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
-   
+   ```bash   
    # CUDA 10.2
    conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.2 -c pytorch
    
