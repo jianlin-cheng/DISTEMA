@@ -1,7 +1,8 @@
 """
-@ Description: Calcudate distance map from pdb file
+@ Description: Covert distance map from pdb file
 @ Author: Shawn Chen
 @ Create date: 2020-12-29
+@ Last updated: 2021-01-17
 """
 
 
@@ -13,6 +14,7 @@ import sys
 
 if len(sys.argv) != 4:
     print('This program needs three parameters: 1. pdb file, 2. fasta file, 3. output folder')
+    print('Program will create output folder automacially')
     sys.exit(1)
 
 pdb_file = os.path.abspath(sys.argv[1]) 
@@ -32,7 +34,6 @@ if __name__=="__main__":
     os.system("perl " + script_path + "/pdb2dist.pl " + pdb_file + " CA 0 8 > " + dist_folder + "/" + target + "_CA.dist")
     os.system("perl " + script_path + "/pdb2dist.pl " + pdb_file + " CB 0 8 > " + dist_folder + "/" + target + "_CB.dist")
     for line_f in open(fasta, "r"):
-
         if line_f.startswith('>'):
             continue
 
