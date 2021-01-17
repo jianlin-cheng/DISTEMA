@@ -70,7 +70,7 @@ if __name__ == '__main__':
     for item in os.listdir(server_model_path):
         pdb_map = os.path.join(server_model_path, item)
         model_name = item.split('.')[0]
-        output_file = os.path.join(output_folder, item + '.txt')
+        output_file = os.path.join(output_folder, model_name + '.txt')
         parameter_list.append([predicted_map, pdb_map, output_file])
         
     p = mp.Pool(multi_core)
