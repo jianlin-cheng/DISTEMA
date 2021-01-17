@@ -55,13 +55,14 @@ Prediction of the quality of single protein model using deep learning and residu
 6. Predict distance map by DeepDist.
 Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
 
+7. Generate difference map
    ```bash
    conda activate DIFFQA
    cd DIFFQA
    python DIFFQA/src/generate_diffmap.py -c 4 -s -p -o example_difference_output
    ```
 
-7. Predicte protein quality score
+8. Predicte protein quality score
    ```bash
    cd DIFFQA
    conda activate DIFFQA
