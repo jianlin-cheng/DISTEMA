@@ -45,7 +45,7 @@ if __name__ == '__main__':
     net = mynet()
     
     # load pretrained model
-    pretrain_model = os.path.join(os.path.abspath(os.path.join(os.getcwd(), "..")),
+    pretrain_model = os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")),
      'pretrain-model/pretrain.pth')
     net.load_state_dict(torch.load(pretrain_model))
     model = net.to(device)
