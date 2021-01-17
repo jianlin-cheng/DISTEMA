@@ -17,7 +17,7 @@ import sys
 
 parser = argparse.ArgumentParser(
     usage = 'python eval_gpu.py difference_map_folder/',
-    descriptipon = 'Eetimation of protein model accuacy.'
+    description = 'Eetimation of protein model accuacy.'
 )
 
 parser.add_argument('-i', '--input', help='Input Difference map folder', required=True)
@@ -25,8 +25,8 @@ parser.add_argument('-o', '--output', help='Output folder', required=True)
 parser.add_argument('-g', '--gpu', help='GPU device', default='cuda:0', required=False)
 args = parser.parse_args()
 
-input_folder = args.input
-output_folder = args.output
+input_folder = os.path.abspath(args.input)
+output_folder = os.path.abspath(args.output)
 device = torch.device(args.gpu)
 
 if not os.path.isdir(input_folder):
@@ -45,7 +45,8 @@ if __name__ == '__main__':
     net = mynet()
     
     # load pretrained model
-    pretrain_model = os.path.join(os.path.dirname(__file__), '../pretrain-model/pretrain.pth')
+    pretrain_model = os.path.join(os.path.abspath(os.path.join(os.getcwd(), "..")),
+     'pretrain-model/pretrain.pth')
     net.load_state_dict(torch.load(pretrain_model))
     model = net.to(device)
     
