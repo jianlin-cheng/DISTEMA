@@ -27,7 +27,9 @@ args = parser.parse_args()
 multi_core = int(args.cores)
 server_model_path = os.path.abspath(args.server_model)
 predicted_map = os.path.abspath(args.perdicted_map)
-output = os.path.abspath(args.output_folder)
+output_folder = os.path.abspath(args.output_folder)
+
+os.makedirs(output_folder, exist_ok=True)
 
 
 def helper(seq_dist, pdb_dist, output_):
@@ -68,7 +70,7 @@ if __name__ == '__main__':
     for item in os.listdir(server_model_path):
         pdb_map = os.path.join(server_model_path, item)
         model_name = item.split('.')[0]
-        output_file = os.path.join(output, item + '.txt')
+        output_file = os.path.join(output_folder, item + '.txt')
         parameter_list.append([predicted_map, pdb_map, output_file])
         
     p = mp.Pool(multi_core)
