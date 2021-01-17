@@ -9,6 +9,10 @@ Prediction of the quality of single protein model using deep learning and residu
 1. Before you run DIFFQA for protein quality prediction, please make sure you installed the [DeepDist](https://github.com/jianlin-cheng/DeepDist) in your environment.
 
 2. Download this git [repo](https://github.com/jianlin-cheng/DIFFQA.git)
+   ```bash
+   # use your account to download
+   git clone https://XiaoChen1992@github.com/jianlin-cheng/DeepDist.git 
+   ```
 
 3. Create a virtual python 3 environment 
 
