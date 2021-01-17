@@ -12,7 +12,7 @@ import argparse
 
 
 parser = argparse.ArgumentParser(
-    usage = 'python pdb2dist_wrapper.py ',
+    usage = 'python pdb2dist_wrapper.py',
     descriptipon = 'wrapper for pdb2dist'
 )
 
