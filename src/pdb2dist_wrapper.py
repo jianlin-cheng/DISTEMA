@@ -9,6 +9,7 @@ import os
 import sys
 import subprocess
 import argparse
+import glob
 
 
 parser = argparse.ArgumentParser(
@@ -40,4 +41,7 @@ if __name__ == '__main__':
         cmd = f'python {script_path}/pdb2dist.py {pdb_file} {fasta_file} {output_folder}'
         subprocess.call(cmd, shell=True)
     
+    for item in glob.glob(os.path.join(output_folder, '*.dist')):
+        os.remove(item)
+
     print('Done')   
