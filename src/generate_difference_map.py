@@ -24,7 +24,7 @@ parser.add_argument('-o', '--output_folder', help='Output folder', required=True
 args = parser.parse_args()
 
 # load parameters
-multi_core = args.cores
+multi_core = int(args.cores)
 server_model_path = args.server_model
 predicted_map = args.perdicted_map
 output = args.output_folder
