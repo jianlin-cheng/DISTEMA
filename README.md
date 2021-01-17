@@ -46,10 +46,9 @@ Extract distance map from pdb file
    cd DIFFQA
    python ./src/pdb2dist.py example/T0949.pdb example/T0949.fasta example_output 
    ```
-Predict distance map by DeepDist.
+6. Predict distance map by DeepDist.
 Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
 
-Generate distance map
   ```bash
   conda activate DIFFQA
   cd DIFFQA
