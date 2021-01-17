@@ -11,7 +11,7 @@ Prediction of the quality of single protein model using deep learning and residu
 2. Download this git [repo](https://github.com/jianlin-cheng/DIFFQA.git)
    ```bash
    # use your account to download
-   git clone https://XiaoChen1992@github.com/jianlin-cheng/DeepDist.git 
+   git clone https://XiaoChen1992@github.com/jianlin-cheng/DIFFQA.git 
    ```
 
 3. Create a virtual python 3 environment 
@@ -48,6 +48,8 @@ Prediction of the quality of single protein model using deep learning and residu
    # Extract distance map from pdb file
    conda activate DIFFQA
    cd DIFFQA
+   unzip DIFFQA/example/server_model/example_data.zip
+   rm DIFFQA/example/server_model/example_data.zip
    python ./src/pdb2dist.py example/T0949.pdb example/T0949.fasta example_output 
    ```
 6. Predict distance map by DeepDist.
@@ -61,8 +63,6 @@ Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
 
 7. Predicte protein quality score
    ```bash
-   cd DIFFQA/example
-   unzip example_data.zip
    cd DIFFQA
    conda activate DIFFQA
    python DIFFQA/src/eval_gpu.py -i DIFFQA/example/example_data -o DIFFQA/example/test_output
