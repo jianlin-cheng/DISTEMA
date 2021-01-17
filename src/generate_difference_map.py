@@ -25,9 +25,9 @@ args = parser.parse_args()
 
 # load parameters
 multi_core = int(args.cores)
-server_model_path = args.server_model
-predicted_map = args.perdicted_map
-output = args.output_folder
+server_model_path = os.path.abspath(args.server_model)
+predicted_map = os.path.abspath(args.perdicted_map)
+output = os.path.abspath(args.output_folder)
 
 
 def helper(seq_dist, pdb_dist, output_):
