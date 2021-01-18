@@ -10,7 +10,7 @@ import os
 import torch
 from model import mynet
 import argparse
-from util import predict_single_gpu
+from util import predict_single
 import pandas as pd
 import numpy as np
 import sys
@@ -23,13 +23,15 @@ parser = argparse.ArgumentParser(
 parser.add_argument('-i', '--input', help='Input Difference map folder', required=True)
 parser.add_argument('-o', '--output', help='Output folder', required=True)
 parser.add_argument('-m', '--model', help='pretrain model', required=True)
-parser.add_argument('-g', '--gpu', help='GPU device', default='cuda:0', required=False)
+parser.add_argument('-g', '--gpu', help='GPU device', default='cuda', required=False)
 args = parser.parse_args()
 
 input_folder = os.path.abspath(args.input)
 output_folder = os.path.abspath(args.output)
 pretrain_model = os.path.abspath(args.model)
+
 device = torch.device(args.gpu)
+
 
 if not os.path.isdir(input_folder):
     print('The input folder does not exist.')
@@ -47,7 +49,10 @@ if __name__ == '__main__':
     net = mynet()
     
     # load pretrained model
-    net.load_state_dict(torch.load(pretrain_model))
+    if args.gpu == 'cuda':
+        net.load_state_dict(torch.load(pretrain_model))
+    else:
+        net.load_state_dict(torch.load(pretrain_model, map_location='cpu'))
     model = net.to(device)
     
     # turn on eval mode
