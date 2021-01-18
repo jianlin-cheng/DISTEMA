@@ -46,7 +46,7 @@ if __name__ == '__main__':
     net = mynet()
     
     # load pretrained model
-    net.load_state_dict(torch.load(pretrain_model), map_location='cpu')
+    net.load_state_dict(torch.load(pretrain_model, map_location='cpu'))
     model = net.to(device)
     
     # turn on eval mode
