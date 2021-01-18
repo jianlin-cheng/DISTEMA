@@ -30,7 +30,6 @@ Prediction of the quality of single protein model using deep learning and residu
    conda install pytorch==1.6.0 torchvision==0.7.0 cpuonly -c pytorch
    
    pip install pandas
-   pip install scipy
    ```
 
 # Evaluation
