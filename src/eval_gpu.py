@@ -66,7 +66,7 @@ if __name__ == '__main__':
         x_data = x_data.to(device, dtype=torch.float)
         x_shape = x_data.shape
         x_data = x_data.view(1,1, x_shape[0], x_shape[1])
-        y_hat = predict_single_gpu(model, x_data)
+        y_hat = predict_single(model, x_data)
         yhat_list.append(y_hat.item())
     
     res = pd.DataFrame(list(zip(model_name_list, yhat_list)), columns=['model', 'pred_gdtts'])
