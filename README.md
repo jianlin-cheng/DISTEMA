@@ -6,7 +6,7 @@ Prediction of the quality of single protein model using deep learning and residu
 # Installation
 1. Before you run DISTEMA for protein quality prediction, please make sure you installed the [DeepDist](https://github.com/jianlin-cheng/DeepDist) in your environment. (If you have DeepDist predicted distance map, you can skip this step. To run example code, you do not need to install DeepDist.)
 
-2. Download this git [repo](https://github.com/jianlin-cheng/DISTEMA.git)
+2. Download this DISTEMA [repo](https://github.com/jianlin-cheng/DISTEMA.git)
    ```bash
    # use your account to download
    git clone https://github.com/jianlin-cheng/DISTEMA.git 
