@@ -14,6 +14,15 @@ from torch import nn
 import torch.nn.functional as F
 
 
+def predict_single(md, single_data):
+    """
+        turn on eval mode, and load model to GPU before call this funtion
+    """
+    with torch.no_grad():
+        y_hat_single = md(single_data)  # gpu
+    return y_hat_single
+
+
 class GlobalMaxPool2d(nn.Module):
     def __init__(self):
         super(GlobalMaxPool2d, self).__init__()
