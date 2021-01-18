@@ -2,6 +2,7 @@
 @ Description: helper functions
 @ Author: Shawn Chen
 @ Create date: 2020-12-29
+@ Last Update: 2020-01-18
 """
 
 import pandas as pd
@@ -19,6 +20,12 @@ def predict_single_gpu(md, single_data):
 
 def predict_single_cpu(md, single_data):
     # TODO
+    """
+        turn on eval mode, and load model to cpu beforem call this function
+    """
+    with torch.no_grad():
+        y_hat_single = md(single_data)
+    return y_hat_single
     return None
 
 def ranking_loss(df):
