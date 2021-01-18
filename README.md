@@ -1,11 +1,9 @@
 # DIFFQA
-
 Prediction of the quality of single protein model using deep learning and residue-residue distance maps
 
 
 
 # Installation
-
 1. Before you run DIFFQA for protein quality prediction, please make sure you installed the [DeepDist](https://github.com/jianlin-cheng/DeepDist) in your environment.
 
 2. Download this git [repo](https://github.com/jianlin-cheng/DIFFQA.git)
@@ -41,9 +39,9 @@ Prediction of the quality of single protein model using deep learning and residu
    # Extract distance map from pdb file
    conda activate DIFFQA
    cd DIFFQA
-   unzip DIFFQA/example/server_model/example_data.zip
-   rm DIFFQA/example/server_model/example_data.zip
-   python ./src/pdb2dist.py example/T0949.pdb example/T0949.fasta example_output 
+   unzip ./example/server_model/example_data.zip
+   rm ./example/server_model/example_data.zip
+   python ./src/pdb2dist.py example/T0949.pdb ./example/T0949.fasta example_output 
    ```
 6. Predict distance map by DeepDist.
 Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
@@ -52,12 +50,12 @@ Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
    ```bash
    conda activate DIFFQA
    cd DIFFQA
-   python DIFFQA/src/generate_diffmap.py -c 2 -s example/server_distmap -p example/pred_distmap/T0949.txt -o example/difference_map
+   python ./src/generate_diffmap.py -c 2 -s ./example/server_distmap -p ./example/pred_distmap/T0949.txt -o ./example/difference_map
    ```
 
 8. Predicte protein quality score
    ```bash
    cd DIFFQA
    conda activate DIFFQA
-   python DIFFQA/src/eval_gpu.py -i DIFFQA/example/example_data -o DIFFQA/example/test_output
+   python ./src/eval_gpu.py -i ./example/example_data -o ./example/test_output -m ./pretrain-model/pretrain.pth
    ```
