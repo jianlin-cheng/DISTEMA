@@ -10,7 +10,6 @@ import os
 import torch
 from model import mynet, predict_single
 import argparse
-from util import predict_single
 import pandas as pd
 import numpy as np
 import sys
