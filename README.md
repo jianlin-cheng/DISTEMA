@@ -39,7 +39,7 @@ Prediction of the quality of single protein model using deep learning and residu
    # Extract distance map from pdb file
    conda activate DIFFQA
    cd DIFFQA
-   unzip ./example/server_model/example_data.zip
+   unzip ./example/server_model/example_data.zip -d ./example/server_model
    rm ./example/server_model/example_data.zip
    python ./src/pdb2dist_wrapper.py  -i ./example/server_model -f ./example/sequence/T0949.fasta -o ./example/server_distmap 
    ```
