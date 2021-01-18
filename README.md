@@ -83,4 +83,4 @@ Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
    ```
 
 # Contact
-If you find any bugs or have any suggestions, please eamil us. [mailto](xiaochen@mail.missouri.edu)
+If you find any bugs or have any suggestions, please eamil xiaochen@mail.missouri.edu
