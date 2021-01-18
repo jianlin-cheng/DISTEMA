@@ -57,7 +57,7 @@ if __name__ == '__main__':
     # turn on eval mode
     model.eval()
     
-    # read data
+    # read data and predict quality score
     for item in os.listdir(input_folder):
         model_name = item.split('.')[0]
         model_name_list.append(model_name)
@@ -72,7 +72,3 @@ if __name__ == '__main__':
     res.sort_values(by='pred_gdtts', ascending=['pred_gdtts'], inplace=True)
     res.to_csv(os.path.join(output_folder, 'ans.csv'), index=False)
     print('Evaluated')
-
-    
-
-        
