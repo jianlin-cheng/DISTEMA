@@ -57,5 +57,10 @@ Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
    ```bash
    cd DIFFQA
    conda activate DIFFQA
-   python ./src/eval_gpu.py -i ./example/difference_map -o ./example/test_output -m ./pretrain-model/pretrain.pth
+   
+   # gpu
+   python ./src/eval.py -i ./example/difference_map -o ./example/test_output -m ./pretrain-model/pretrain.pth
+
+   # cpu
+   python ./src/eval.py -g cpu -i ./example/difference_map -o ./example/test_output -m ./pretrain-model/pretrain.pth
    ```
