@@ -81,3 +81,6 @@ Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
    -m --model: Pretrain model file path
    -g --gpu: gpu option, default: -g cuda, if you want to use cpu set -g: cpu
    ```
+
+# Contact
+If you find any bugs or have any suggestions, please eamil us. [mailto](xiaochen@mail.missouri.edu)
