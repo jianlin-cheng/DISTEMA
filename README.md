@@ -41,7 +41,12 @@ Prediction of the quality of single protein model using deep learning and residu
    cd DIFFQA
    unzip ./example/server_model/example_data.zip -d ./example/server_model
    rm ./example/server_model/example_data.zip
-   python ./src/pdb2dist_wrapper.py  -i ./example/server_model -f ./example/sequence/T0949.fasta -o ./example/server_distmap 
+   python ./src/pdb2dist_wrapper.py  -i ./example/server_model -f ./example/sequence/T0949.fasta -o ./example/server_distmap
+   ---
+   paramerters: 
+   -i --input: Input server model folder path
+   -f --fasta: sequence fasta file path
+   -o --output: Output folder path
    ```
 6. Predict distance map by DeepDist.
 Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
@@ -51,6 +56,12 @@ Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
    conda activate DIFFQA
    cd DIFFQA
    python ./src/generate_difference_map.py -c 2 -s ./example/server_distmap -p ./example/pred_distmap/T0949.txt -o ./example/difference_map
+   ---
+   paramerters:
+   -c --cores: multi-processiong cores
+   -s --server_model: Server model distance maps folder path
+   -p --predicted_map: DeepDist predicted distance map folder path
+   -o --output_folder: Output folder path
    ```
 
 8. Predicte protein quality score
@@ -63,4 +74,10 @@ Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
 
    # cpu
    python ./src/eval.py -g cpu -i ./example/difference_map -o ./example/test_output -m ./pretrain-model/pretrain.pth
+   ---
+   parameters:
+   -i --input: Input server model folder path
+   -o --output: Output folder path
+   -m --model: Pretrain model file path
+   -g --gpu: gpu option, default: -g cuda, if you want to use cpu set -g: cpu
    ```
