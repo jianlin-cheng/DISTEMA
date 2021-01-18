@@ -49,7 +49,7 @@ Prediction of the quality of single protein model using deep learning and residu
    ```
    
 6. Predict distance map by DeepDist.
-Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
+Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist) (To run example code, skip this step.)
 
 7. Generate difference map
    ```bash
