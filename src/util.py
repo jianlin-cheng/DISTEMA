@@ -10,7 +10,7 @@ import torch
 import numpy as np
 
 
-def predict_single_gpu(md, single_data):
+def predict_single(md, single_data):
     """
         turn on eval mode, and load model to GPU before call this funtion
     """
@@ -18,15 +18,15 @@ def predict_single_gpu(md, single_data):
         y_hat_single = md(single_data)  # gpu
     return y_hat_single
 
-def predict_single_cpu(md, single_data):
-    # TODO
-    """
-        turn on eval mode, and load model to cpu beforem call this function
-    """
-    with torch.no_grad():
-        y_hat_single = md(single_data)
-    return y_hat_single
-    return None
+# def predict_single_cpu(md, single_data):
+#     # TODO
+#     """
+#         turn on eval mode, and load model to cpu beforem call this function
+#     """
+#     with torch.no_grad():
+#         y_hat_single = md(single_data)
+#     return y_hat_single
+#     return None
 
 def ranking_loss(df):
     df.loc[:, 'target'] = df.loc[:, 'index_col'].apply(lambda x: x.split(':')[0])
