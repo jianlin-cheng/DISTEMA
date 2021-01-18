@@ -9,7 +9,7 @@ Prediction of the quality of single protein model using deep learning and residu
 2. Download this git [repo](https://github.com/jianlin-cheng/DISTEMA.git)
    ```bash
    # use your account to download
-   git clone https://XiaoChen1992@github.com/jianlin-cheng/DISTEMA.git 
+   git clone https://github.com/jianlin-cheng/DISTEMA.git 
    ```
 
 3. Create a virtual python 3 environment 
@@ -47,6 +47,7 @@ Prediction of the quality of single protein model using deep learning and residu
    -f --fasta: sequence fasta file path
    -o --output: Output folder path
    ```
+   
 6. Predict distance map by DeepDist.
 Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
 
