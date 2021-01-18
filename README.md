@@ -50,7 +50,7 @@ Follow the instruction by  [DeepDist](https://github.com/jianlin-cheng/DeepDist)
    ```bash
    conda activate DIFFQA
    cd DIFFQA
-   python ./src/generate_diffmap.py -c 2 -s ./example/server_distmap -p ./example/pred_distmap/T0949.txt -o ./example/difference_map
+   python ./src/generate_difference_map.py -c 2 -s ./example/server_distmap -p ./example/pred_distmap/T0949.txt -o ./example/difference_map
    ```
 
 8. Predicte protein quality score
