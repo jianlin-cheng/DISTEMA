@@ -81,6 +81,15 @@ Follow the instruction by  [DeepDist](https://github.com/multicom-toolbox/deepdi
    -m --model: Pretrain model file path
    -g --gpu: gpu option, default: -g cuda, if you want to use cpu set -g: cpu
    ```
+# Cite
+If you think our work help you, please cit our ICIBM2021 paper by
+@article{chen2021distema,
+  title={DISTEMA: distance map-based estimation of single protein model accuracy with attentive 2D convolutional neural network},
+  author={Chen, Xiao and Cheng, Jianlin},
+  journal={bioRxiv},
+  year={2021},
+  publisher={Cold Spring Harbor Laboratory}
+}
 
 # Contact
 If you find any bugs or have any suggestions, please eamil xiaochen@mail.missouri.edu
