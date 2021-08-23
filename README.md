@@ -82,7 +82,7 @@ Follow the instruction by  [DeepDist](https://github.com/multicom-toolbox/deepdi
    -g --gpu: gpu option, default: -g cuda, if you want to use cpu set -g: cpu
    ```
 # Cite
-If you think our work help you, please cit our ICIBM2021 paper by
+If you think our work is helpful you, please cite our ICIBM2021 paper by
 ```
 @article{chen2021distema,
   title={DISTEMA: distance map-based estimation of single protein model accuracy with attentive 2D convolutional neural network},
