@@ -63,6 +63,15 @@ Follow the instruction by  [DeepDist](https://github.com/multicom-toolbox/deepdi
    -p --predicted_map: DeepDist predicted distance map folder path
    -o --output_folder: Output folder path
    ```
+7.1. Download generated data
+7.1.1. Download difference map
+   ```bash
+   wget https://zenodo.org/record/6040731/files/DISTEMA_data.tgz
+   ```
+7.1.2. Download label (gdt-ts)
+   ```bash
+   wget https://zenodo.org/record/6040731/files/DISTEMA_label.tgz
+   ```
 
 8. Predicte protein quality score
    ```bash
