@@ -64,6 +64,7 @@ Follow the instruction by  [DeepDist](https://github.com/multicom-toolbox/deepdi
    -o --output_folder: Output folder path
    ```
 7.1. Download generated data
+
 7.1.1. Download difference map
    ```bash
    wget https://zenodo.org/record/6040731/files/DISTEMA_data.tgz
