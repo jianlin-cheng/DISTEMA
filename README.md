@@ -1,7 +1,20 @@
 # DISTEMA
 Prediction of the quality of single protein model using deep learning and residue-residue distance maps
 
-
+# Cite
+If you think our work is helpful you, please cite our ICIBM2021 paper published on BMC bioinformatics
+```
+@article{chen2022distema,
+  title={DISTEMA: distance map-based estimation of single protein model accuracy with attentive 2D convolutional neural network},
+  author={Chen, Xiao and Cheng, Jianlin},
+  journal={BMC bioinformatics},
+  volume={23},
+  number={3},
+  pages={1--14},
+  year={2022},
+  publisher={Springer}
+}
+```
 
 # Installation
 1. Before you run DISTEMA for protein quality prediction, please make sure you installed the [DeepDist](https://github.com/multicom-toolbox/deepdist) in your environment. (If you have DeepDist predicted distance map, you can skip this step. To run example code, you do not need to install DeepDist.)
@@ -91,19 +104,6 @@ Follow the instruction by  [DeepDist](https://github.com/multicom-toolbox/deepdi
    -m --model: Pretrain model file path
    -g --gpu: gpu option, default: -g cuda, if you want to use cpu set -g: cpu
    ```
-# Cite
-If you think our work is helpful you, please cite our ICIBM2021 paper by
-```
-@article{chen2022distema,
-  title={DISTEMA: distance map-based estimation of single protein model accuracy with attentive 2D convolutional neural network},
-  author={Chen, Xiao and Cheng, Jianlin},
-  journal={BMC bioinformatics},
-  volume={23},
-  number={3},
-  pages={1--14},
-  year={2022},
-  publisher={Springer}
-}
-```
+
 # Contact
 If you find any bugs or have any suggestions, please eamil xcbh6@umsystem.edu
