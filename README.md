@@ -94,13 +94,16 @@ Follow the instruction by  [DeepDist](https://github.com/multicom-toolbox/deepdi
 # Cite
 If you think our work is helpful you, please cite our ICIBM2021 paper by
 ```
-@article{chen2021distema,
+@article{chen2022distema,
   title={DISTEMA: distance map-based estimation of single protein model accuracy with attentive 2D convolutional neural network},
   author={Chen, Xiao and Cheng, Jianlin},
-  journal={bioRxiv},
-  year={2021},
-  publisher={Cold Spring Harbor Laboratory}
+  journal={BMC bioinformatics},
+  volume={23},
+  number={3},
+  pages={1--14},
+  year={2022},
+  publisher={Springer}
 }
 ```
 # Contact
-If you find any bugs or have any suggestions, please eamil xiaochen@mail.missouri.edu
+If you find any bugs or have any suggestions, please eamil xcbh6@umsystem.edu
